@@ -1,0 +1,77 @@
+
+
+
+void main() {
+ 
+  Apprenant a1= new Apprenant();
+  a1.niveauetude = 'premier année';
+  print(a1.getInfo());
+}
+
+
+void main() {
+ 
+  User b1= new User();
+  b1.nom = 'libasse';
+  b1.prenom = 'yade';
+  b1.address = 'thiaroye'; 
+  print(b1.getInfo());
+}
+
+
+class User{
+  
+  String nom= '';
+  String prenom = '' ;
+  String address= '' ;
+  
+  void etudier(){
+    
+    print('je mange');
+  }
+  
+  
+  
+  String getInfo(){
+    return '${this.nom}, ${this.prenom}, ${this.address}';
+  }
+  
+  
+}
+
+
+
+
+class Apprenant extends User () {
+  
+  String niveauetude = '';
+  
+  void etudier(){
+    
+    print('j''etudie flutter');
+  }
+  
+  void passerExamen (){
+    
+    print('je passe les examens ');
+                     }
+  
+   String getInfo(){
+    return '${this.super.User} ,${this.niveauetude} ';
+  }
+  
+  
+  
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
